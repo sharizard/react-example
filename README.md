@@ -13,7 +13,7 @@ yarn add -D @types/react @types/react-dom typescript @types/react-redux @types/s
 
 # Webpack
 ```
-yarn add -D webpack webpack-cli webpack-dev-server cross-env @types/webpack-dev-server @types/webpack @types/webpack-env @types/node html-webpack-plugin clean-webpack-plugin terser-webpack-plugin html-loader source-map-loader ts-loader webpack-merge
+yarn add -D webpack webpack-cli webpack-dev-server cross-env @types/webpack-dev-server @types/webpack @types/webpack-env @types/node html-webpack-plugin clean-webpack-plugin terser-webpack-plugin html-loader source-map-loader css-loader style-loader ts-loader webpack-merge file-loader url-loader
 ```
 
 # Babel

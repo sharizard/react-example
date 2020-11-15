@@ -13,7 +13,8 @@
     "moduleResolution": "node",
     "baseUrl": "./src",
     "esModuleInterop": true,
-    "types": ["react", "node"]
+    "types": ["react", "node"],
+    "forceConsistentCasingInFileNames": true,
   },
   "include": ["./src/**/*"],
   "exclude": ["node_modules", "webpack.*.js"]

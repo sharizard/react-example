@@ -1,8 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
-const App = () => {
-  return <h1>Hello world!!</h1>
-};
+import { App } from './app';
+import store from './state/store';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+if ((module as any).hot) {
+  (module as any).hot.accept();
+}
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);

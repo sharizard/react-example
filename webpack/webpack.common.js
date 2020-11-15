@@ -31,7 +31,20 @@ module.exports = {
   module: {
     rules: [
       { test: /\.html$/, loader: "html-loader" },
-      { test: /\.tsx?$/, loader: "ts-loader" }
+      {
+        test: /\.tsx?$/,
+        loader: "ts-loader",
+        options: {
+          transpileOnly: true,
+        },
+        exclude: /node_modules/,
+      },
+      { test: /\.(eot|ttf|woff2?|otf|svg)$/, loader:'file-loader' },
+      { test: /\.(bmp|gif|jpe?g|png)$/, loader:'url-loader' },
+      { test: /\.css$/, use: [
+        'style-loader',
+        {loader: 'css-loader', options: {sourceMap: true, importLoaders: 1}},
+      ] }
     ]
   }
 };
